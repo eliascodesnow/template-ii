@@ -1,7 +1,7 @@
-import moeImg from "@/assets/barber-moe.jpg";
-import samImg from "@/assets/barber-sam.jpg";
-import brianImg from "@/assets/barber-brian.jpg";
-import { barbers } from "@/data";
+import moeImg from "./barber-moe.jpg";
+import samImg from "./barber-sam.jpg";
+import brianImg from "./barber-brian.jpg";
+import { barbers } from "./data";
 import { ArrowIcon } from "./Icons";
 import { Reveal, SectionHead } from "./ui";
 

@@ -1,4 +1,4 @@
-import { useShop } from "@/lib/shop";
+import { useShop } from "./shop";
 import { ArrowIcon, WhatsAppIcon } from "./Icons";
 import { Reveal } from "./ui";
 

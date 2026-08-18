@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { ShopProvider, useShop } from "@/lib/shop";
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { Services } from "@/components/Services";
-import { Gallery } from "@/components/Gallery";
-import { Team } from "@/components/Team";
-import { Testimonials } from "@/components/Testimonials";
-import { Visit } from "@/components/Visit";
-import { Cta } from "@/components/Cta";
-import { Footer } from "@/components/Footer";
-import { BookingModal, type Prefill } from "@/components/BookingModal";
-import { WhatsAppIcon } from "@/components/Icons";
+import { ShopProvider, useShop } from "./shop";
+import { Navbar } from "./Navbar";
+import { Hero } from "./Hero";
+import { Services } from "./Services";
+import { Gallery } from "./Gallery";
+import { Team } from "./Team";
+import { Testimonials } from "./Testimonials";
+import { Visit } from "./Visit";
+import { Cta } from "./Cta";
+import { Footer } from "./Footer";
+import { BookingModal, type Prefill } from "./BookingModal";
+import { WhatsAppIcon } from "./Icons";
 
 function WaFloat({ hidden }: { hidden: boolean }) {
   const { shop, waLink } = useShop();

@@ -1,6 +1,6 @@
-import { testimonials } from "@/data";
+import { testimonials } from "./data";
 import { StarIcon } from "./Icons";
-import { cn } from "@/utils/cn";
+import { cn } from "./cn";
 import { Reveal, SectionHead } from "./ui";
 
 export function Testimonials() {
