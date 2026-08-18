@@ -10,14 +10,13 @@ import { Visit } from "@/components/Visit";
 import { Cta } from "@/components/Cta";
 import { Footer } from "@/components/Footer";
 import { BookingModal, type Prefill } from "@/components/BookingModal";
-import { SettingsDrawer } from "@/components/SettingsDrawer";
 import { WhatsAppIcon } from "@/components/Icons";
 
 function WaFloat({ hidden }: { hidden: boolean }) {
   const { shop, waLink } = useShop();
   return (
     <a
-      href={waLink(`Habari ${shop.name}! ✂️ I'd like to book a haircut. What's the next free slot?`)}
+      href={waLink(`Habari ${shop.name}! ✂️ I'd like to book a service. What's the next free slot?`)}
       target="_blank"
       rel="noreferrer"
       aria-label="Book on WhatsApp"
@@ -29,7 +28,7 @@ function WaFloat({ hidden }: { hidden: boolean }) {
       <span className="hidden border border-line bg-ink px-4 py-3 text-[11px] font-bold uppercase tracking-[0.2em] text-bone shadow-lg transition-colors group-hover:border-brass group-hover:text-brass sm:block">
         Book on WhatsApp
       </span>
-      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-wa text-white shadow-[0_8px_30px_rgba(37,211,102,0.35)] transition-transform duration-300 group-hover:scale-105">
+      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-wa text-white shadow-[0_8px_30px_rgba(37,211,102,0.35)] transition-transform duration-300 group-hover:scale-110">
         <span className="ping-soft absolute inline-flex h-full w-full rounded-full bg-wa/60" aria-hidden="true" />
         <WhatsAppIcon className="relative h-7 w-7" />
       </span>
@@ -39,13 +38,12 @@ function WaFloat({ hidden }: { hidden: boolean }) {
 
 function Shell() {
   const [booking, setBooking] = useState<{ open: boolean; prefill: Prefill }>({ open: false, prefill: {} });
-  const [settings, setSettings] = useState(false);
 
   const openBooking = (prefill?: Prefill) => setBooking({ open: true, prefill: prefill ?? {} });
 
   return (
     <div className="relative">
-      <Navbar onBook={() => openBooking()} onSettings={() => setSettings(true)} />
+      <Navbar onBook={() => openBooking()} />
       <main>
         <Hero onBook={() => openBooking()} />
         <Services onBook={(serviceId) => openBooking(serviceId ? { serviceId } : undefined)} />
@@ -55,11 +53,10 @@ function Shell() {
         <Visit />
         <Cta onBook={() => openBooking()} />
       </main>
-      <Footer onBook={() => openBooking()} onSettings={() => setSettings(true)} />
-      <WaFloat hidden={booking.open || settings} />
+      <Footer onBook={() => openBooking()} />
+      <WaFloat hidden={booking.open} />
 
       {booking.open && <BookingModal prefill={booking.prefill} onClose={() => setBooking((b) => ({ ...b, open: false }))} />}
-      {settings && <SettingsDrawer onClose={() => setSettings(false)} />}
     </div>
   );
 }

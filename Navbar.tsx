@@ -6,15 +6,15 @@ import { MenuIcon, PhoneIcon, ScissorsIcon, WhatsAppIcon, XIcon } from "./Icons"
 const links = [
   { href: "#services", label: "Services" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#barbers", label: "Barbers" },
+  { href: "#barbers", label: "Team" },
   { href: "#reviews", label: "Reviews" },
   { href: "#visit", label: "Visit" },
 ];
 
 const navLink =
-  "relative text-[13px] font-semibold uppercase tracking-[0.18em] text-bone/70 transition-colors hover:text-bone after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-brass after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100";
+  "relative text-[13px] font-semibold uppercase tracking-[0.18em] text-bone/70 transition-colors hover:text-bone after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-brass after:transition-transform after:duration-300 hover:after:scale-x-100";
 
-export function Navbar({ onBook, onSettings }: { onBook: () => void; onSettings: () => void }) {
+export function Navbar({ onBook }: { onBook: () => void }) {
   const { shop } = useShop();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -70,17 +70,6 @@ export function Navbar({ onBook, onSettings }: { onBook: () => void; onSettings:
               <PhoneIcon className="h-4 w-4" />
               {shop.phone}
             </a>
-            <button
-              onClick={onSettings}
-              aria-label="Shop settings"
-              title="Shop settings (demo)"
-              className="hidden h-10 w-10 items-center justify-center border border-line text-sand transition-colors hover:border-brass hover:text-brass sm:flex"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-4.5 w-4.5" aria-hidden="true">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-              </svg>
-            </button>
             <button
               onClick={onBook}
               className="group hidden items-center gap-2 bg-brass px-5 py-3 text-[13px] font-bold uppercase tracking-[0.14em] text-ink transition-colors hover:bg-brass-soft sm:flex"
