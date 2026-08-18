@@ -1,7 +1,7 @@
-import fadeImg from "@/assets/gallery-fade.jpg";
-import shaveImg from "@/assets/gallery-shave.jpg";
-import chairImg from "@/assets/gallery-chair.jpg";
-import styleImg from "@/assets/gallery-style.jpg";
+import fadeImg from "./gallery-fade.jpg";
+import shaveImg from "./gallery-shave.jpg";
+import chairImg from "./gallery-chair.jpg";
+import styleImg from "./gallery-style.jpg";
 import { Reveal, SectionHead } from "./ui";
 
 const shots = [

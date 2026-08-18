@@ -1,4 +1,4 @@
-import { ksh, services } from "@/data";
+import { ksh, services } from "./data";
 import { ArrowIcon, WhatsAppIcon } from "./Icons";
 import { Reveal, SectionHead } from "./ui";
 

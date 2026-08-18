@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import { ksh, services, timeSlots } from "@/data";
-import { useShop } from "@/lib/shop";
-import { cn } from "@/utils/cn";
+import { ksh, services, timeSlots } from "./data";
+import { useShop } from "./shop";
+import { cn } from "./cn";
 import { CheckIcon, WhatsAppIcon, XIcon } from "./Icons";
 
 export type Prefill = { serviceId?: string; barber?: string };

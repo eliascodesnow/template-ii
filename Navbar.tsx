@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { cn } from "@/utils/cn";
-import { useShop } from "@/lib/shop";
+import { cn } from "./cn";
+import { useShop } from "./shop";
 import { MenuIcon, PhoneIcon, ScissorsIcon, WhatsAppIcon, XIcon } from "./Icons";
 
 const links = [

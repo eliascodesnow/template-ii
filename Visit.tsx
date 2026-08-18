@@ -1,6 +1,6 @@
-import { hoursLabel, useShop } from "@/lib/shop";
+import { hoursLabel, useShop } from "./shop";
 import { ArrowIcon, ClockIcon, PhoneIcon, PinIcon } from "./Icons";
-import { cn } from "@/utils/cn";
+import { cn } from "./cn";
 import { Reveal, SectionHead } from "./ui";
 
 const dayOrder = [1, 2, 3, 4, 5, 6, 0];

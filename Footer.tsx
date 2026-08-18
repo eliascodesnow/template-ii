@@ -1,4 +1,4 @@
-import { hoursLabel, useShop } from "@/lib/shop";
+import { hoursLabel, useShop } from "./shop";
 import { GearIcon, ScissorsIcon, WhatsAppIcon } from "./Icons";
 
 const links = [

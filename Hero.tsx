@@ -1,6 +1,6 @@
-import heroImg from "@/assets/hero.jpg";
-import { useShop } from "@/lib/shop";
-import { marqueeItems } from "@/data";
+import heroImg from "./hero.jpg";
+import { useShop } from "./shop";
+import { marqueeItems } from "./data";
 import { ArrowIcon, DiamondIcon, StarIcon, WhatsAppIcon } from "./Icons";
 import { MaskLine, Reveal } from "./ui";
 

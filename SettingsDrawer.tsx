@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { normalizeWa, useShop } from "@/lib/shop";
+import { normalizeWa, useShop } from "./shop";
 import { CheckIcon, XIcon } from "./Icons";
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {

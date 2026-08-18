@@ -1,5 +1,5 @@
 import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
-import { cn } from "@/utils/cn";
+import { cn } from "./cn";
 
 export function Reveal({
   children,
